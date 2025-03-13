@@ -426,20 +426,25 @@ header {
     max-width: 100%;
     display: flex;
     align-items: center;
+    gap: 20px; /* Space between image and text */
 }
-.about-content
-{
+
+/* 📌 Image Container */
+.about-content {
     width: 50%;
 }
-.about-content img
-{
+
+.about-content img {
     width: 100%;
+    border-radius: 8px;
 }
-.about-container
-{
+
+/* 📌 Text Container */
+.about-container {
     width: 50%;
     padding: 30px;
 }
+
 .about h2 {
     font-size: 2.5rem;
     color: #007bff;
@@ -450,9 +455,37 @@ header {
     font-size: 1.2rem;
     color: #333;
     line-height: 1.6;
-   
     margin: 0 auto;
 }
+
+/* 📌 Responsive for Mobile (320px - 475px) */
+@media (max-width: 475px) {
+    .about {
+        flex-direction: column; /* ✅ Image & text ek k niche ek */
+        text-align: center;
+        padding: 30px 10px;
+    }
+
+    .about-content, .about-container {
+        width: 100%;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .about h2 {
+        font-size: 1.8rem; /* Mobile ke liye chhota size */
+    }
+
+    .about p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+
+
 
 /* Contact Us Section */
 .contact {
