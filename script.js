@@ -43,3 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".map-button").style.display = "block";
 });
+
+
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
