@@ -66,7 +66,7 @@ nav ul li a:hover {
 .hero {
     background: url('https://source.unsplash.com/1600x900/?electricity,technology') center/cover no-repeat fixed;
     color: white;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
