@@ -38,3 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showElements();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".map-button").style.display = "block";
+});
