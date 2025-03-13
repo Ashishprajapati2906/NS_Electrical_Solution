@@ -242,6 +242,9 @@ nav ul li a:hover {
 
 /* ✅ Responsive Design */
 @media (max-width: 768px) {
+    .hero{
+        margin-top: 100px;
+    }
     header {
         flex-wrap: wrap;
         justify-content: center;
