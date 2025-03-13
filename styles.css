@@ -135,7 +135,7 @@ header {
 .hero {
     background: url('https://source.unsplash.com/1600x900/?electricity,technology') center/cover no-repeat fixed;
     color: white;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,6 +143,8 @@ header {
     padding: 20px;
     position: relative;
     overflow: hidden;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .hero-content {
