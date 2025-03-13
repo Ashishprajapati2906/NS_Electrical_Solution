@@ -426,6 +426,106 @@ nav ul li a:hover {
     gap: 8px;
 }
 
+/* Apply flickering glow effect */
+.lightning {
+    display: inline-block;
+    animation: flicker 0.2s infinite alternate, glow 1s infinite alternate;
+}
+
+/* Flickering Effect (Fast light blinks) */
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 5px yellow, 0 0 10px orange; }
+    50% { opacity: 0.6; text-shadow: 0 0 10px yellow, 0 0 20px red; }
+    100% { opacity: 1; text-shadow: 0 0 15px yellow, 0 0 25px white; }
+}
+
+/* Glow effect to make it look like electric sparks */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px yellow, 0 0 10px orange; }
+    100% { text-shadow: 0 0 15px yellow, 0 0 30px white; }
+}
+
+/* Plug animation */
+.plug-animate {
+    display: inline-block;
+    animation: plugMove 1s infinite alternate ease-in-out;
+}
+
+/* Keyframes for plug movement */
+@keyframes plugMove {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px) rotate(10deg); }  /* Forward tilt */
+    100% { transform: translateX(0); } /* Reset position */
+}
+
+
+/* Building animation */
+.building-animate {
+    display: inline-block;
+    animation: buildingShake 1.5s infinite alternate ease-in-out;
+}
+
+/* Keyframes for building shake */
+@keyframes buildingShake {
+    0% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-2px, 2px) scale(1.05); }
+    50% { transform: translate(2px, -2px) scale(1); }
+    75% { transform: translate(-2px, 2px) scale(1.05); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+
+/* Slide-in effect for text */
+.slide-in {
+    opacity: 0;
+    animation: slideIn 1.5s ease-in-out forwards;
+}
+
+/* Rotate effect for the gear emoji */
+.gear {
+    display: inline-block;
+    animation: rotate360 2s linear infinite;
+}
+
+/* Keyframes for slide-in */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Keyframes for 360° rotation */
+@keyframes rotate360 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Fade-in effect for text */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Fade-in effect for emoji */
+.emoji {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards, bounce 0.5s ease-in-out 1.5s infinite;
+}
+
+/* Keyframes for Fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyframes for slight bouncing effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+
 /* Fade-in Animation */
 @keyframes fadeInUp {
     from {
@@ -486,21 +586,36 @@ nav ul li a:hover {
 }
 
 
+/* WhatsApp Button with Vibration Effect */
 .whatsapp-link {
     display: inline-block;
-    background: #25D366;
+    background-color: #25D366;
     color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 16px;
     font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px rgba(37, 211, 102, 0.4);
+    animation: vibrate 0.5s infinite linear;
+    transition: transform 0.2s ease;
 }
 
-.whatsapp-link:hover {
-    background: #1EBE5D;
-    transform: scale(1.05);
+/* Vibration Animation */
+@keyframes vibrate {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(2px, -2px); }
 }
+
+/* Hover Effect */
+.whatsapp-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(37, 211, 102, 0.6);
+}
+
 
 .whatsapp-link:active {
     transform: scale(0.95);
