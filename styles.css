@@ -350,31 +350,27 @@ header {
     }
 }
 
-/* Default styling */
+/* 📌 Default Styling (For Desktop) */
 .contact-container h2 {
-    font-size: 32px; /* Desktop view */
-    text-align: center;
+    font-size: 28px;  /* Default h2 size */
+    font-weight: bold;
 }
 
 .contact-container p {
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 18px;  /* Default p size */
 }
 
-/* Responsive Design for Mobile Screens (320px - 475px) */
-@media (max-width: 475px) {
+/* 📱 Responsive Styles for Mobile Screens (320px - 475px) */
+@media (min-width: 320px) and (max-width: 475px) {
     .contact-container h2 {
-        font-size: 22px; /* Smaller heading */
-        line-height: 1.2; /* Adjust spacing */
+        font-size: 22px;  /* h3 ke barabar */
     }
 
     .contact-container p {
-        font-size: 14px; /* Smaller paragraph text */
-        line-height: 1.4;
+        font-size: 14px;  /* Small text for better fit */
     }
 }
+
 
 
 /* About Us Section */

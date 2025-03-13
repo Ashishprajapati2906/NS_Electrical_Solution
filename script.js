@@ -48,3 +48,33 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
 }
+
+function adjustContactSection() {
+    const contactContainer = document.querySelector(".contact-container");
+    const heading = contactContainer.querySelector("h2, h3"); // Select h2 or h3
+    const paragraph = contactContainer.querySelector("p");
+
+    if (window.innerWidth >= 320 && window.innerWidth <= 475) {
+        if (heading.tagName === "H2") {
+            const newHeading = document.createElement("h3");
+            newHeading.innerHTML = heading.innerHTML; // Copy same content
+            newHeading.className = heading.className; // Copy same classes
+            contactContainer.replaceChild(newHeading, heading);
+        }
+        paragraph.style.fontSize = "14px";  // Small text for better fit
+        paragraph.style.lineHeight = "1.4"; // Adjust spacing
+    } else {
+        if (heading.tagName === "H3") {
+            const newHeading = document.createElement("h2");
+            newHeading.innerHTML = heading.innerHTML; // Copy same content
+            newHeading.className = heading.className; // Copy same classes
+            contactContainer.replaceChild(newHeading, heading);
+        }
+        paragraph.style.fontSize = "18px"; // Default size for larger screens
+        paragraph.style.lineHeight = "1.6"; // Default spacing
+    }
+}
+
+// **Event Listeners**
+window.addEventListener("load", adjustContactSection);
+window.addEventListener("resize", adjustContactSection);
