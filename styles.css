@@ -319,7 +319,7 @@ header {
 /* ✅ Responsive Design */
 @media (max-width: 768px) {
     .hero{
-        margin-top: 100px;
+        margin-top: 62px;
     }
     header {
         flex-wrap: wrap;
