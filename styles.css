@@ -734,3 +734,67 @@ nav ul li a:hover {
     font-weight: 500;
     color: #333;
 }
+
+/* Styling for 'Find Us on Google Maps' */
+.map-section h2 {
+    font-size: 28px; /* Bigger font */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px; 
+    color: #333; /* Dark color for better visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Light shadow */
+}
+
+/* Add spacing below the heading */
+.map-section h2 + p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px; 
+    margin-bottom: 30px; /* Extra gap below */
+}
+
+/* Make 📍 emoji animated */
+.emoji1 {
+    display: inline-block;
+    animation: bounce 1.5s infinite alternate ease-in-out;
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
+/* Improved stylish shadow for the map box */
+.map-box-shadow {
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency for a premium feel */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.15), 
+        0 4px 6px rgba(0, 0, 0, 0.10); /* Multi-layered shadow for depth */
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto; /* Center the box */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle glowing border */
+.map-box-shadow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 87, 34, 0.2));
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Glow effect on hover */
+.map-box-shadow:hover::before {
+    opacity: 1;
+}
