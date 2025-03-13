@@ -371,6 +371,41 @@ header {
     }
 }
 
+@keyframes ring {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
+.contact-call-link {
+    display: inline-block;
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.contact-call-link:hover {
+    background-color: #218838;
+}
+
+.contact-call-link::before {
+    content: "📞"; /* Phone Emoji */
+    display: inline-block;
+    animation: ring 1s infinite; /* Apply animation */
+    margin-right: 5px;
+}
+
+
 
 
 /* About Us Section */
@@ -433,6 +468,24 @@ header {
     animation: pulse 1.5s infinite;
     box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
 }
+
+@media (max-width: 475px) {
+    .contact-options {
+        display: flex;
+        flex-direction: column; /* ✅ One below another */
+        gap: 10px; /* ✅ Add spacing between buttons */
+        align-items: center; /* ✅ Center align */
+    }
+
+    .contact-options a {
+        width: 100%; /* ✅ Full width buttons */
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+}
+
 
 /* Hover Effect */
 .contact-phone a:hover {
