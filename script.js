@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("active");
 }
+
 function adjustContactSection() {
     const contactContainer = document.querySelector(".contact-container");
     const heading = contactContainer.querySelector("h2, h3"); // Select h2 or h3
@@ -58,10 +59,10 @@ function adjustContactSection() {
             const newHeading = document.createElement("h3");
             newHeading.innerHTML = heading.innerHTML; // Copy same content
             newHeading.className = heading.className; // Copy same classes
-            newHeading.style.fontSize = "24px"; // ✅ Set h3 size to 22px
+            newHeading.style.fontSize = "28px"; // ✅ Set h3 size to 22px
             contactContainer.replaceChild(newHeading, heading);
         } else {
-            heading.style.fontSize = "24px"; // ✅ Ensure h3 stays at 22px
+            heading.style.fontSize = "28px"; // ✅ Ensure h3 stays at 22px
         }
         paragraph.style.fontSize = "14px";  // Small text for better fit
         paragraph.style.lineHeight = "1.4"; // Adjust spacing
