@@ -995,3 +995,26 @@ header {
 .map-box-shadow:hover::before {
     opacity: 1;
 }
+
+.emoji-container {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    animation: lightning 1s infinite alternate ease-in-out;
+  }
+  
+  @keyframes lightning {
+    0% {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    }
+    50% {
+      text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+      transform: scale(1.1) rotate(-2deg);
+    }
+    100% {
+      text-shadow: 0 0 5px #ffffff, 0 0 15px #00ffff, 0 0 25px #00ffff;
+      transform: scale(1);
+    }
+  }
+  
